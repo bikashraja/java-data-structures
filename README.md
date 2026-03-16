@@ -1,8 +1,48 @@
 # Java Data Structures
 
+![Java](https://img.shields.io/badge/Java-17+-orange)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+
 This repository contains implementations of fundamental data structures written in Java.
 
 The goal of this project is to understand how core data structures work internally by implementing them from scratch without relying on Java's built-in collections.
+
+---
+
+## Getting Started
+
+**Requirements:** Java 17+
+
+Clone the repository and open it in IntelliJ IDEA as a new project.  
+No build tool required — compile and run directly.
+
+---
+
+## Project Structure
+```
+src/
+├── main/
+│   └── java/
+│       └── datastructures/
+│           ├── dynamicarray/
+│           │   ├── DynamicArray.java
+│           │   └── DynamicArrayDemo.java
+│           ├── list/
+│           │   ├── DoublyLinkedList.java
+│           │   └── DoublyLinkedListDemo.java
+│           ├── queue/
+│           │   ├── CircularArrayQueue.java
+│           │   ├── CircularArrayQueueDemo.java
+│           │   ├── LinkedListQueue.java
+│           │   └── LinkedListQueueDemo.java
+│           ├── stack/
+│           │   ├── ArrayStack.java
+│           │   └── ArrayStackDemo.java
+│           └── trees/        (planned)
+└── test/                     (planned)
+```
+
+---
 
 ## Implemented Data Structures
 
