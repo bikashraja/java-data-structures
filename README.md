@@ -144,13 +144,13 @@ Operations:
 
 Time Complexity:
 
-| Operation | Complexity     |
-|-----------|----------------|
-| enqueue   | O(1) amortized |
-| dequeue   | O(1) amortized |
-| peek      | O(1)           |
-| size      | O(1)           |
-| isEmpty   | O(1)           |
+| Operation | Complexity |
+|-----------|------------|
+| enqueue   | O(1)       |
+| dequeue   | O(1)       |
+| peek      | O(1)       |
+| size      | O(1)       |
+| isEmpty   | O(1)       |
 
 Location:  
 `src/main/java/datastructures/queue/LinkedListQueue.java`
