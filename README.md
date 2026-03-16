@@ -26,7 +26,7 @@ Time Complexity:
 | size      | O(1)           |
 
 Location:
-`src/main/java/datastructures/stack/StackAsArray.java`
+`src/main/java/datastructures/stack/ArrayStack.java`
 
 ---
 
@@ -106,9 +106,35 @@ Location:
 
 ---
 
+### Queue (Circular Array)
+Generic queue implementation using a circular array with dynamic resizing.  
+The structure follows FIFO (First-In-First-Out) order and uses modular indexing to reuse array space efficiently.
+
+Operations:
+- enqueue
+- dequeue
+- peek
+- size
+- isEmpty
+
+Time Complexity:
+
+| Operation | Complexity     |
+|-----------|----------------|
+| enqueue   | O(1) amortized |
+| dequeue   | O(1) amortized |
+| peek      | O(1)           |
+| size      | O(1)           |
+| isEmpty   | O(1)           |
+
+Location:  
+`src/main/java/datastructures/queue/CircularArrayQueue.java`
+
+---
+
 ## Example Usage
 ```java
-StackAsArray<Integer> stack = new StackAsArray<>();
+ArrayStack<Integer> stack = new ArrayStack<>();
 
 stack.push(10);
 stack.push(20);
@@ -153,13 +179,23 @@ for (Integer val : list) {
 }
 // Output: 4 3 2
 ```
----
 
+```java
+CircularArrayQueue<Integer> queue = new CircularArrayQueue<>();
+
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+
+System.out.println(queue.dequeue()); // 10
+System.out.println(queue.peek());    // 20
+System.out.println(queue.size());    // 2
+```
+---
 ## Planned Implementations
 
 The following data structures will be added progressively:
 
-- Queue
 - Binary Search Tree
 - AVL Tree
 - Red-Black Tree
