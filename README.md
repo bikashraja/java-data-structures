@@ -38,8 +38,11 @@ src/
 │           ├── stack/
 │           │   ├── ArrayStack.java
 │           │   └── ArrayStackDemo.java
-│           └── trees/        (planned)
-└── test/                     (planned)
+│           ├── binarysearchtree/
+│           │   ├── BinarySearchTree.java
+│           │   └── BSTDemo.java 
+│           └── redblacktree/        (planned)
+└── test/     (planned)                
 ```
 
 ---
@@ -196,7 +199,49 @@ Location:
 `src/main/java/datastructures/queue/LinkedListQueue.java`
 
 ---
+### Binary Search Tree
+Generic Binary Search Tree (BST) implementation storing elements in sorted order based on their natural ordering.
 
+This implementation does not self-balance, meaning performance depends on tree height.
+
+Properties:
+- Left subtree contains smaller elements
+- Right subtree contains larger elements
+- No duplicate values stored
+
+Operations:
+- insert
+- delete
+- contains
+- findMin
+- findMax
+- height
+- size
+- isEmpty
+- isValidBST
+- inOrder (sorted traversal)
+- preOrder
+- postOrder
+- levelOrder (BFS traversal)
+- iterator (in-order)
+
+Time Complexity:
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| insert    | O(log n) | O(n)       |
+| delete    | O(log n) | O(n)       |
+| search    | O(log n) | O(n)       |
+| traversal | O(n)     | O(n)       |
+
+Notes:
+- Worst-case occurs when the tree becomes unbalanced (e.g., inserting sorted data)
+- For guaranteed O(log n), use self-balancing trees like AVL or Red-Black Trees
+
+Location:  
+`src/main/java/datastructures/binarysearchtree/BinarySearchTree.java`
+
+---
 ## Example Usage
 ```java
 ArrayStack<Integer> stack = new ArrayStack<>();
@@ -268,11 +313,29 @@ System.out.println(queue.dequeue()); // 10
 System.out.println(queue.peek());    // 20
 System.out.println(queue.size());    // 2
 ```
+
+```java
+BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+
+bst.insert(50);
+bst.insert(30);
+bst.insert(70);
+bst.insert(20);
+bst.insert(40);
+
+System.out.println(bst.inOrder());   // [20, 30, 40, 50, 70]
+System.out.println(bst.contains(40)); // true
+
+bst.delete(30);
+
+System.out.println(bst.inOrder());   // [20, 40, 50, 70]
+System.out.println(bst.findMin());   // 20
+System.out.println(bst.findMax());   // 70
+```
 ---
 ## Planned Implementations
 
 The following data structures will be added progressively:
 
-- Binary Search Tree
 - AVL Tree
 - Red-Black Tree
