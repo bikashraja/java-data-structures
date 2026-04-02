@@ -20,35 +20,40 @@ No build tool required — compile and run directly.
 
 ## Project Structure
 ```
-src/
-├── main/
-│   └── java/
-│       └── datastructures/
-│           ├── dynamicarray/
-│           │   ├── DynamicArray.java
-│           │   └── DynamicArrayDemo.java
-│           ├── list/
-│           │   ├── DoublyLinkedList.java
-│           │   └── DoublyLinkedListDemo.java
-│           ├── queue/
-│           │   ├── CircularArrayQueue.java
-│           │   ├── CircularArrayQueueDemo.java
-│           │   ├── LinkedListQueue.java
-│           │   └── LinkedListQueueDemo.java
-│           ├── stack/
-│           │   ├── ArrayStack.java
-│           │   └── ArrayStackDemo.java
-│           ├── binarysearchtree/
-│           │   ├── BinarySearchTree.java
-│           │   └── BSTDemo.java 
-│           ├── redblacktree/
-│           │   ├── RedBlackTree.java
-│           │   └── RBTreeDemo.java 
-│           └── avltree/        
-│               ├── AVLTree.java
-│               └── AVLTreeDemo.java 
-│
-└── test/     (planned)                
+java-data-structures/
+├── pom.xml
+└── src/
+    ├── main/
+    │   └── java/
+    │       └── datastructures/
+    │           ├── dynamicarray/
+    │           │   ├── DynamicArray.java
+    │           │   └── DynamicArrayDemo.java
+    │           ├── list/
+    │           │   ├── DoublyLinkedList.java
+    │           │   └── DoublyLinkedListDemo.java
+    │           ├── queue/
+    │           │   ├── CircularArrayQueue.java
+    │           │   ├── CircularArrayQueueDemo.java
+    │           │   ├── LinkedListQueue.java
+    │           │   └── LinkedListQueueDemo.java
+    │           ├── stack/
+    │           │   ├── ArrayStack.java
+    │           │   └── ArrayStackDemo.java
+    │           ├── binarysearchtree/
+    │           │   ├── BinarySearchTree.java
+    │           │   └── BSTDemo.java 
+    │           ├── redblacktree/
+    │           │   ├── RedBlackTree.java
+    │           │   └── RBTreeDemo.java 
+    │           └── avltree/        
+    │               ├── AVLTree.java
+    │               └── AVLTreeDemo.java 
+    │
+    └── test
+        └── java/
+                └── datastructures/  (planned)
+                                
 ```
 
 ---
