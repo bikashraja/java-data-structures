@@ -37,6 +37,7 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
 
     private Node root;
     private int size;
+    private boolean inserted;
 
     /**
      * Inserts a value into the tree.
@@ -48,14 +49,20 @@ public class RedBlackTree<T extends Comparable<T>> implements Iterable<T> {
             throw new IllegalArgumentException("Value cannot be null");
         }
 
+        inserted = false;
         Node node = new Node(value, RED, null);
         root = bstInsert(root, node);
-        fixInsert(node);
-        size++;
+        if (inserted) {
+            fixInsert(node);
+            size++;
+        }
     }
 
     private Node bstInsert(Node root, Node node) {
-        if (root == null) return node;
+        if (root == null) {
+            inserted = true;
+            return node;
+        }
 
         int cmp = node.value.compareTo(root.value);
 
