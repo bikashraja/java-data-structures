@@ -1,7 +1,7 @@
 # Java Data Structures
 
 ![Java](https://img.shields.io/badge/Java-17+-orange)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 
 This repository contains implementations of fundamental data structures written in Java.
@@ -78,7 +78,7 @@ java-data-structures/
                     ├── redblacktree/
                     │   └── RedBlackTreeTest.java 
                     └── avltree/        
-                        └── AVLTreeTest.java (planned)
+                        └── AVLTreeTest.java
                                 
 ```
 
@@ -499,8 +499,14 @@ Currently covered:
     - Randomized stress testing
     - Iterator correctness
 
-Planned:
-- AVL Tree tests
+
+- AVL Tree:
+  - Self-balancing after insertions (LL, RR, LR, RL rotations)
+  - Height and balance factor correctness
+  - In-order traversal correctness
+  - Size tracking and duplicate handling
+  - Structural validation of AVL properties
+  - Randomized stress testing
 
 To run tests:
 ```bash
