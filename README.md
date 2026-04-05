@@ -74,7 +74,7 @@ java-data-structures/
         └── java/
                 └── datastructures/
                     ├── binarysearchtree/
-                    │   └── BinarySearchTreeTest.java (planned)
+                    │   └── BinarySearchTreeTest.java
                     ├── redblacktree/
                     │   └── RedBlackTreeTest.java 
                     └── avltree/        
@@ -481,6 +481,15 @@ System.out.println(tree.isValidAVL());    // true
 Unit tests are implemented using **JUnit 5**.
 
 Currently covered:
+
+- Binary Search Tree:
+  - Insertion, search, and deletion (all cases: leaf, one child, two children)
+  - In-order traversal correctness (BST invariant)
+  - Size consistency after operations
+  - Handling of duplicate values
+  - Randomized insert/delete stress testing
+
+
 - Red-Black Tree:
     - Insertion and search
     - In-order traversal correctness
@@ -491,7 +500,6 @@ Currently covered:
     - Iterator correctness
 
 Planned:
-- Binary Search Tree tests
 - AVL Tree tests
 
 To run tests:
