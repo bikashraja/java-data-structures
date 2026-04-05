@@ -106,20 +106,28 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T> {
             node.right = delete(node.right, value);
         } else {
             // node to delete found
-            size--;
 
             // case 1: no child
             if (node.left == null && node.right == null) {
+                size--;
                 return null;
             }
 
             // case 2: one child
-            if (node.left == null) return node.right;
-            if (node.right == null) return node.left;
+            if (node.left == null) {
+                size--;
+                return node.right;
+            }
+            if (node.right == null) {
+                size--;
+                return node.left;
+            }
 
             // case 3: two children
             Node<T> successor = findMinNode(node.right);
             node.value = successor.value;
+
+            // IMPORTANT: do NOT decrement size here
             node.right = delete(node.right, successor.value);
         }
 
